@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Input;
 use App\Models\Item;
 use App\Models\ItemDetail;
+use App\Models\Category;
+use App\Models\CatDetail;
 
 class ItemController extends Controller
 {
@@ -75,13 +77,46 @@ class ItemController extends Controller
         return $getItemDetail;
     }
 
-    public function getItemByGenre($genre){
+    public function getItemByGenre($genre, $page, $itemNumb){
         $getItemDetails = ItemDetail::where('value', $genre)->get();
         $itemArray = array();
         foreach ($getItemDetails as $getItemDetail){
             $getItemByGenre = Item::where('id', $getItemDetail->item_id)->get();
-            array_push($itemArray, $getItemByGenre);
+            foreach($getItemByGenre as $itemGenre){
+                array_push($itemArray, $itemGenre);
+            }
         }
-        return $itemArray;
+//        $firstData = ($page-1)*$itemNumb;
+        $collection = collect($itemArray);
+        $chunk = $collection->forPage($page, $itemNumb);
+
+        if($chunk->count()>0){
+            return response($chunk);
+        }else{
+            return response('Error No Page', 400);
+        }
+    }
+
+    public function getAllKey($cat_id){
+        $children = Category::find($cat_id);
+        $cat = array();
+        array_push($cat, $children);
+        $res = array();
+        while($children->parent_id != null){
+            $children = Category::find($children->parent_id);
+            array_push($cat, $children);
+        }
+        foreach ($cat as $child){
+            $allkey = CatDetail::where('cat_id', $child->id)->get();
+            foreach ($allkey as $key)
+                array_push($res, $key);
+        }
+
+        return $res;
+    }
+
+    public function getItemPagination(){
+        return Item::paginate(20);
     }
 }
+

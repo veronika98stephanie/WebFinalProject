@@ -146,6 +146,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Sleimanx2\Plastic\PlasticServiceProvider::class,
 
         /*
          * Package Service Providers...

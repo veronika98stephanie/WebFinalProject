@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use Illuminate\Http\Request;
 use App\Models\Cart;
 
@@ -18,7 +19,11 @@ class CartController extends Controller
             'qty' => $request->qty,
         ];
 
-        $newCart = $this->cart->create($newCart);
+        $qtySuffice = Item::where('id', $request->itemId)->get();
+
+        if($qtySuffice > $request->qty){
+            $newCart = $this->cart->create($newCart);
+        }
 
         if($newCart != null){
             var_dump($newCart);

@@ -47,6 +47,8 @@ Route::put('/update_purchase_list', 'HistoryController@updatePurchaseList');
 
 Route::get('/get_client', 'ClientController@getClient');
 Route::get('/get_item_detail/{id}', 'ItemController@getItemDetail');
-Route::get('/get_item_by_genre/{genre}', 'ItemController@getItemByGenre');
+Route::get('/get_item_by_genre/{genre}/{page}/{itemNumb}', 'ItemController@getItemByGenre');
+Route::get('/get_all_key/{cat_id}', 'ItemController@getAllKey');
+Route::get('/get_item_pagination', 'ItemController@getItemPagination');
 
 

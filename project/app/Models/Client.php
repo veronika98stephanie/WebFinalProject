@@ -11,4 +11,8 @@ class Client extends Model
         'name', 'email', 'password',
         'accessToken', 'address', 'phone'
     ];
+
+    public function cart(){
+        $this->hasOne('Cart');
+    }
 }
