@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b8ad4271-e099-46c0-a1eb-25129415ea54" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/WebFinalProject.iml" afterPath="$PROJECT_DIR$/.idea/WebFinalProject.iml" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/project/app/Http/Controllers/ItemController.php" afterPath="$PROJECT_DIR$/project/app/Http/Controllers/ItemController.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Cart.php" afterPath="$PROJECT_DIR$/project/app/Models/Cart.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/CatDetail.php" afterPath="$PROJECT_DIR$/project/app/Models/CatDetail.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Category.php" afterPath="$PROJECT_DIR$/project/app/Models/Category.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Client.php" afterPath="$PROJECT_DIR$/project/app/Models/Client.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Customer.php" afterPath="$PROJECT_DIR$/project/app/Models/Customer.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/CustomerItem.php" afterPath="$PROJECT_DIR$/project/app/Models/CustomerItem.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Item.php" afterPath="$PROJECT_DIR$/project/app/Models/Item.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/ItemDetail.php" afterPath="$PROJECT_DIR$/project/app/Models/ItemDetail.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/PaymentMethod.php" afterPath="$PROJECT_DIR$/project/app/Models/PaymentMethod.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Promo.php" afterPath="$PROJECT_DIR$/project/app/Models/Promo.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Purchase.php" afterPath="$PROJECT_DIR$/project/app/Models/Purchase.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/PurchaseList.php" afterPath="$PROJECT_DIR$/project/app/Models/PurchaseList.php" />
-      <change beforePath="$PROJECT_DIR$/project/app/Models/Status.php" afterPath="$PROJECT_DIR$/project/app/Models/Status.php" />
-      <change beforePath="$PROJECT_DIR$/project/composer.json" afterPath="$PROJECT_DIR$/project/composer.json" />
-      <change beforePath="$PROJECT_DIR$/project/composer.lock" afterPath="$PROJECT_DIR$/project/composer.lock" />
-      <change beforePath="$PROJECT_DIR$/project/config/app.php" afterPath="$PROJECT_DIR$/project/config/app.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151006_create_payment_methods_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151006_create_payment_methods_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151117_create_statuses_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151117_create_statuses_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151308_create_categories_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151308_create_categories_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151330_create_cat_details_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151330_create_cat_details_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151400_create_items_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151400_create_items_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151437_create_item_details_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151437_create_item_details_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151448_create_promos_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151448_create_promos_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151516_create_clients_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151516_create_clients_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151538_create_carts_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151538_create_carts_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151632_create_purchases_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151632_create_purchases_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151716_create_purchase_lists_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151716_create_purchase_lists_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151741_create_customers_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151741_create_customers_table.php" />
-      <change beforePath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151751_create_customer_items_table.php" afterPath="$PROJECT_DIR$/project/database/migrations/2018_03_05_151751_create_customer_items_table.php" />
-    </list>
+    <list default="true" id="b8ad4271-e099-46c0-a1eb-25129415ea54" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -453,12 +419,12 @@
       <workItem from="1520764598445" duration="4898000" />
       <workItem from="1520770408877" duration="9579000" />
       <workItem from="1520818286549" duration="14861000" />
-      <workItem from="1520905557823" duration="12583000" />
+      <workItem from="1520905557823" duration="12669000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43121000" />
+    <option name="totallyTimeSpent" value="43207000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
