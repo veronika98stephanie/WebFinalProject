@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateCategoriesTable extends Migration
 {
@@ -14,11 +15,12 @@ class CreateCategoriesTable extends Migration
     public function up()
     {
         Schema::create('categories', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('parent_id')->nullable()->unsigned();
+            $table->uuid('id');
+            $table->primary('id');
+            $table->text('parent_id');
             $table->string('name', 100);
-            $table->foreign('parent_id')->references('id')->on('categories');
         });
+        DB::statement('ALTER TABLE categories ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

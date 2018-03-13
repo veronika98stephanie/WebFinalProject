@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Support\Facades\DB;
 
-class CreatePaymentMethodsTable extends Migration
+class AddUuidExtensionToPostgresql extends Migration
 {
     /**
      * Run the migrations.
@@ -14,12 +14,7 @@ class CreatePaymentMethodsTable extends Migration
      */
     public function up()
     {
-        Schema::create('payment_methods', function (Blueprint $table) {
-            $table->uuid('id');
-            $table->string('name', 100);
-            $table->primary('id');
-        });
-        DB::statement('ALTER TABLE payment_methods ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
+        DB::statement('CREATE EXTENSION IF NOT EXISTS "uuid-ossp";');
     }
 
     /**
@@ -29,6 +24,6 @@ class CreatePaymentMethodsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payment_methods');
+        DB::statement('DROP EXTENSION IF EXISTS "uuid-ossp";');
     }
 }

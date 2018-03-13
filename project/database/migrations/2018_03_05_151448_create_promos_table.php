@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreatePromosTable extends Migration
 {
@@ -14,9 +15,11 @@ class CreatePromosTable extends Migration
     public function up()
     {
         Schema::create('promos', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
+            $table->primary('id');
             $table->mediumText('imgUrl');
         });
+        DB::statement('ALTER TABLE promos ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

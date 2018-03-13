@@ -30,7 +30,6 @@
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/nesbot/carbon" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/nikic/php-parser" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/nunomaduro/collision" />
-      <excludeFolder url="file://$MODULE_DIR$/project/vendor/ongr/elasticsearch-dsl" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/phar-io/version" />
@@ -62,7 +61,6 @@
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/sebastian/recursion-context" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/sebastian/resource-operations" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/sebastian/version" />
-      <excludeFolder url="file://$MODULE_DIR$/project/vendor/sleimanx2/plastic" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/css-selector" />
@@ -75,7 +73,6 @@
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/polyfill-php72" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/process" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/routing" />
-      <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/serializer" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/thanks" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/project/vendor/symfony/var-dumper" />

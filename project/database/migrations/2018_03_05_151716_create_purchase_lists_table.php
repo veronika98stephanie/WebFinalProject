@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreatePurchaseListsTable extends Migration
 {
@@ -14,13 +15,15 @@ class CreatePurchaseListsTable extends Migration
     public function up()
     {
         Schema::create('purchase_lists', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('purchaseId')->unsigned();
-            $table->integer('itemId')->unsigned();
+            $table->uuid('id');
+            $table->primary('id');
+            $table->uuid('purchaseId')->unsigned();
+            $table->uuid('itemId')->unsigned();
             $table->integer('qty');
             $table->foreign('purchaseId')->references('id')->on('purchases');
             $table->foreign('itemId')->references('id')->on('items');
         });
+        DB::statement('ALTER TABLE purchase_lists ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**

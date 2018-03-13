@@ -8,13 +8,17 @@ use App\Models\Item;
 use App\Models\ItemDetail;
 use App\Models\Category;
 use App\Models\CatDetail;
+use App\ElasticModel\ItemElasticModel;
 
 class ItemController extends Controller
 {
+    protected $itemElasticModel;
     public function __construct(Item $item, ItemDetail $itemDetail){
         $this->item = $item;
         $this->itemDetail = $itemDetail;
+        $this->itemElasticModel = new ItemElasticModel();
     }
+
 
     public function addItem(Request $request){
         $newItem = [
@@ -28,6 +32,7 @@ class ItemController extends Controller
 
          $newItem = $this->item->create($newItem);
 
+         return $this->itemElasticModel->add(1 ,$request->cat_id, $request->qty,$request->name,$request->summary,$request->price,$request->imgUrl);
          if ($newItem != null){
              var_dump($newItem);
          }else{

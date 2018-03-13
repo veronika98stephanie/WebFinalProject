@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
+use Illuminate\Support\Facades\DB;
 
 class CreateStatusesTable extends Migration
 {
@@ -14,9 +15,11 @@ class CreateStatusesTable extends Migration
     public function up()
     {
         Schema::create('statuses', function (Blueprint $table) {
-            $table->increments('id');
+            $table->uuid('id');
+            $table->primary('id');
             $table->string('name', 100);
         });
+        DB::statement('ALTER TABLE statuses ALTER COLUMN id SET DEFAULT uuid_generate_v4();');
     }
 
     /**
